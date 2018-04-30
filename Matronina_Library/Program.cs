@@ -9,7 +9,7 @@ namespace Matronina_Library
     static class Program
     {
         /// <summary>
-        /// Главная точка входа для приложения.
+        /// Главная точка входа для приложения!!!
         /// </summary>
         [STAThread]
         static void Main()
