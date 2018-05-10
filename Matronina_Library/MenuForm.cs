@@ -22,5 +22,23 @@ namespace Matronina_Library
             AboutForm frm = new AboutForm();
             frm.Show();
         }
+
+        private void ButtonBookList_Click(object sender, EventArgs e)
+        {
+            BookListForm frm = new BookListForm();
+            frm.Show();
+        }
+
+        private void ButtonBooksRented_Click(object sender, EventArgs e)
+        {
+            BooksRentedForm frm = new BooksRentedForm();
+            frm.Show();
+        }
+
+        private void ButtonReaders_Click(object sender, EventArgs e)
+        {
+            ReadersForm frm = new ReadersForm();
+            frm.Show();
+        }
     }
 }
