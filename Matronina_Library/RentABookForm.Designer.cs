@@ -1,6 +1,6 @@
 ﻿namespace Matronina_Library
 {
-    partial class ReadersForm
+    partial class RentABookForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.ButtonReaderAdd = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // ButtonReaderAdd
-            // 
-            this.ButtonReaderAdd.Location = new System.Drawing.Point(32, 417);
-            this.ButtonReaderAdd.Name = "ButtonReaderAdd";
-            this.ButtonReaderAdd.Size = new System.Drawing.Size(746, 23);
-            this.ButtonReaderAdd.TabIndex = 0;
-            this.ButtonReaderAdd.Text = "Добавить читателя";
-            this.ButtonReaderAdd.UseVisualStyleBackColor = true;
-            // 
-            // ReadersForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ButtonReaderAdd);
-            this.Name = "ReadersForm";
-            this.Text = "Наши читатели";
-            this.ResumeLayout(false);
-
+            this.Text = "RentABookForm";
         }
 
         #endregion
-
-        private System.Windows.Forms.Button ButtonReaderAdd;
     }
 }

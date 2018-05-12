@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Matronina_Library
 {
-    public partial class BookListForm : Form
+    public partial class RentABookForm : Form
     {
-        public BookListForm()
+        public RentABookForm()
         {
             InitializeComponent();
-        }
-
-        private void ButtonBookAdd_Click(object sender, EventArgs e)
-        {
-            BookAddForm frm = new BookAddForm();
-            frm.Show();
         }
     }
 }

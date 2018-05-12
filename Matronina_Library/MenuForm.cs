@@ -40,5 +40,11 @@ namespace Matronina_Library
             ReadersForm frm = new ReadersForm();
             frm.Show();
         }
+
+        private void ButtonRentABook_Click(object sender, EventArgs e)
+        {
+            RentABookForm frm = new RentABookForm();
+            frm.Show();
+        }
     }
 }
