@@ -16,5 +16,21 @@ namespace Matronina_Library
         {
             InitializeComponent();
         }
+
+        private void ButtonSaveReaderAdd_Click(object sender, EventArgs e)
+        {
+            string librarycard = InputLibraryCard.Text;
+            string namesurname = InputNameSurname.Text;
+            string readeraddress = InputReaderAddress.Text;
+            string readerphone = InputReaderPhone.Text;
+            string result = librarycard + "/" + namesurname + "/" + readeraddress + "/" + readerphone;
+
+            using (System.IO.StreamWriter file =
+            new System.IO.StreamWriter("MatroninaLibraryReaders.txt", true))
+            {
+                file.WriteLine(result);
+            }
+            this.Close();
+        }
     }
 }

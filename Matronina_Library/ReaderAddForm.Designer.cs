@@ -111,6 +111,7 @@
             this.ButtonSaveReaderAdd.TabIndex = 8;
             this.ButtonSaveReaderAdd.Text = "Сохранить";
             this.ButtonSaveReaderAdd.UseVisualStyleBackColor = true;
+            this.ButtonSaveReaderAdd.Click += new System.EventHandler(this.ButtonSaveReaderAdd_Click);
             // 
             // ReaderAddForm
             // 
