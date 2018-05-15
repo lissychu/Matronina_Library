@@ -17,6 +17,15 @@ namespace Matronina_Library
             InitializeComponent();
         }
 
+        public BookAddForm(string[] book)
+        {
+            InitializeComponent();
+            this.Text = "О книге";
+
+            InputBookCode.Text = book[0];
+            InputBookCode.ReadOnly = true;
+        }
+
         private void ButtonSaveBookAdd_Click(object sender, EventArgs e)
         {
             string bookcode = InputBookCode.Text;

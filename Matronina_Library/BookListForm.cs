@@ -12,6 +12,8 @@ namespace Matronina_Library
 {
     public partial class BookListForm : Form
     {
+        private List<string[]> BookListArray = new List<string[]>();
+
         public BookListForm()
         {
             InitializeComponent();
@@ -31,6 +33,8 @@ namespace Matronina_Library
         private void UpdateItems()
         {
             BookList.Items.Clear();
+            this.BookListArray.Clear();
+
             string line;
 
             System.IO.StreamReader file =
@@ -46,6 +50,8 @@ namespace Matronina_Library
                 arr[2] = tokens[2];
                 itm = new ListViewItem(arr);
                 BookList.Items.Add(itm);
+
+                this.BookListArray.Add(tokens);
             }
 
             file.Close();
@@ -58,6 +64,22 @@ namespace Matronina_Library
             BookList.Columns[2].Width = 421;
 
             this.UpdateItems();
+        }
+
+        private void BookList_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (BookList.SelectedItems.Count == 1)
+            {
+                ListView.SelectedListViewItemCollection items = BookList.SelectedItems;
+                ListViewItem.ListViewSubItemCollection lvItem = items[0].SubItems;
+
+                string id = lvItem[0].Text;
+
+                var itemBook = this.BookListArray.Find(item => item[0] == id);
+
+                BookAddForm frm = new BookAddForm(itemBook);
+                frm.Show();
+            }
         }
     }
 }

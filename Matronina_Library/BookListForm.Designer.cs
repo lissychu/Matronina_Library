@@ -52,12 +52,14 @@
             this.ColumnBookCode,
             this.ColumnBookAuthor,
             this.ColumnBookName});
+            this.BookList.FullRowSelect = true;
             this.BookList.Location = new System.Drawing.Point(15, 12);
             this.BookList.Name = "BookList";
             this.BookList.Size = new System.Drawing.Size(763, 356);
             this.BookList.TabIndex = 1;
             this.BookList.UseCompatibleStateImageBehavior = false;
             this.BookList.View = System.Windows.Forms.View.Details;
+            this.BookList.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.BookList_MouseDoubleClick);
             // 
             // ColumnBookCode
             // 
