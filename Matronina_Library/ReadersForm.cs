@@ -12,6 +12,8 @@ namespace Matronina_Library
 {
     public partial class ReadersForm : Form
     {
+        private List<string[]> ReadersListArray = new List<string[]>();
+
         public ReadersForm()
         {
             InitializeComponent();
@@ -30,6 +32,7 @@ namespace Matronina_Library
         private void UpdateItems()
         {
             ReadersList.Items.Clear();
+            ReadersListArray.Clear();
             string line;
 
             System.IO.StreamReader file =
@@ -44,6 +47,8 @@ namespace Matronina_Library
                 arr[1] = tokens[1];
                 itm = new ListViewItem(arr);
                 ReadersList.Items.Add(itm);
+
+                this.ReadersListArray.Add(tokens);
             }
 
             file.Close();
@@ -52,9 +57,25 @@ namespace Matronina_Library
         private void ReadersForm_Load(object sender, EventArgs e)
         {
             ReadersList.Columns[0].Width = 100;
-            ReadersList.Columns[1].Width = 600;
+            ReadersList.Columns[1].Width = 650;
 
             this.UpdateItems();
+        }
+
+        private void ReadersList_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (ReadersList.SelectedItems.Count == 1)
+            {
+                ListView.SelectedListViewItemCollection items = ReadersList.SelectedItems;
+                ListViewItem.ListViewSubItemCollection lvItem = items[0].SubItems;
+
+                string id = lvItem[0].Text;
+
+                var itemReader = this.ReadersListArray.Find(item => item[0] == id);
+
+                ReaderAddForm frm = new ReaderAddForm(itemReader);
+                frm.Show();
+            }
         }
     }
 }

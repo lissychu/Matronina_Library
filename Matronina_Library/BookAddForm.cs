@@ -24,6 +24,24 @@ namespace Matronina_Library
 
             InputBookCode.Text = book[0];
             InputBookCode.ReadOnly = true;
+
+            InputAuthor.Text = book[1];
+            InputAuthor.ReadOnly = true;
+
+            InputBookName.Text = book[2];
+            InputBookName.ReadOnly = true;
+
+            InputBookYear.Text = book[3];
+            InputBookYear.ReadOnly = true;
+
+            InputBookPrice.Text = book[4];
+            InputBookPrice.ReadOnly = true;
+
+            InputBookAnnotation.Text = book[5];
+            InputBookAnnotation.ReadOnly = true;
+
+            ButtonSaveBookAdd.Visible = false;
+
         }
 
         private void ButtonSaveBookAdd_Click(object sender, EventArgs e)

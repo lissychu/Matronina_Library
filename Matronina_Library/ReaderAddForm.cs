@@ -17,6 +17,27 @@ namespace Matronina_Library
             InitializeComponent();
         }
 
+        public ReaderAddForm(string[] reader)
+        {
+            InitializeComponent();
+            this.Text = "О читателе";
+
+            InputLibraryCard.Text = reader[0];
+            InputLibraryCard.ReadOnly = true;
+
+            InputNameSurname.Text = reader[1];
+            InputNameSurname.ReadOnly = true;
+
+            InputReaderAddress.Text = reader[2];
+            InputReaderAddress.ReadOnly = true;
+
+            InputReaderPhone.Text = reader[3];
+            InputReaderPhone.ReadOnly = true;
+
+            ButtonSaveReaderAdd.Visible = false;
+
+        }
+
         private void ButtonSaveReaderAdd_Click(object sender, EventArgs e)
         {
             string librarycard = InputLibraryCard.Text;
