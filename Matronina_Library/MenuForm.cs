@@ -31,7 +31,7 @@ namespace Matronina_Library
 
         private void ButtonBooksRented_Click(object sender, EventArgs e)
         {
-            BooksRentedForm frm = new BooksRentedForm();
+            RentedBooksForm frm = new RentedBooksForm();
             frm.Show();
         }
 

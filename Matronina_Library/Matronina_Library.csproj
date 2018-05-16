@@ -63,12 +63,6 @@
     <Compile Include="BookListForm.Designer.cs">
       <DependentUpon>BookListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BooksRentedForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="BooksRentedForm.Designer.cs">
-      <DependentUpon>BooksRentedForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +89,12 @@
     <Compile Include="RentABookForm.Designer.cs">
       <DependentUpon>RentABookForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RentedBooksForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RentedBooksForm.Designer.cs">
+      <DependentUpon>RentedBooksForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,9 +103,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BookListForm.resx">
       <DependentUpon>BookListForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BooksRentedForm.resx">
-      <DependentUpon>BooksRentedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
@@ -124,6 +121,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ReadersForm.resx">
       <DependentUpon>ReadersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentABookForm.resx">
+      <DependentUpon>RentABookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RentedBooksForm.resx">
+      <DependentUpon>RentedBooksForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
